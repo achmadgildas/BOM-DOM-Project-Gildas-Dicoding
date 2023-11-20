@@ -19,9 +19,9 @@
     }
   </style>
 </head>
-<body>
+<body onload="welcome()"> 
 <div class="contents" align="center" hidden>
-  <button id="incrementButton">Tekan Aku :)</button>
+  <button id="incrementButton" onclick="increment()">Tekan Aku :)</button>
   <h3>Kamu sudah menekan tombol di atas sebanyak <span id="count">0</span></h3>
 </div>
  
@@ -32,7 +32,7 @@
   const contents = document.querySelector('.contents');
   contents.removeAttribute('hidden');
   }
-  document.body.onload = welcome;
+ // document.body.onload = welcome;
 
   //kode event listener onklick
   function increment() {
@@ -45,7 +45,7 @@
     const contents = document.querySelector('.contents');
     contents.appendChild(hiddenMessage).appendChild(image);}
 }
-document.getElementById('incrementButton').onclick = increment;
+//document.getElementById('incrementButton').onclick = increment;
 </script>
 </body>
 </html>
