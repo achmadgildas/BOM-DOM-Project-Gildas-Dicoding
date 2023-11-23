@@ -43,4 +43,21 @@ document.addEventListener('DOMContentLoaded', function () {
         submitButtonStatus.setAttribute('disabled', '');
       }
     });
+
+    document.getElementById('formDataDiri').addEventListener('submit', function (event) {
+      const inputCaptcha = document.getElementById('inputCaptcha').value;
+      if (inputCaptcha === 'PRNU') {
+        alert('Selamat! Captcha Anda lolos :D');
+      } else {
+        alert('Captcha Anda belum tepat :(');
+        document.getElementById('submitButton').setAttribute('disabled', '');
+      }
+      event.preventDefault();
+    });
+
+    //event OnCopy, fungsi yang mendeteksi ketika kita melakukan copy
+    document.getElementById('inputCopy').addEventListener('copy', function () {
+      alert('Anda telah men-copy sesuatu...');
+    });
+
 });
