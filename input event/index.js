@@ -60,4 +60,9 @@ document.addEventListener('DOMContentLoaded', function () {
       alert('Anda telah men-copy sesuatu...');
     });
 
+    //event OnPaste, termasuk dalam clipboard event
+    document.getElementById('inputPaste').addEventListener('paste', function () {
+      alert('Anda telah mem-paste sebuah teks...');
+    });
+
 });
